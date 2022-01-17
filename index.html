@@ -11,35 +11,35 @@
 
 
 
-	$(function(){
-	$.ajax({
-	url: "./school.json",
-	dataType: "json",
-	success : function(data){
-	if(data.length>0){
-	var tb = $("<table/>");
+	$(function () {
+		$.ajax({
+			url: "./school.json",
+			dataType: "json",
+			success: function (data) {
+				if (data.length > 0) {
+					var tb = $("<table/>");
 
-	for(var i in data){
-	var $SIGUN_NM = data[i].SIGUN_NM;
-	var $FACLT_NM = data[i].FACLT_NM;
-	var $TELNO = data[i].TELNO;
-	var $REFINE_LOTNO_ADDR = data[i].REFINE_LOTNO_ADDR;
-	var $REFINE_ZIPNO = data[i].REFINE_ZIPNO;
+					for (var i in data) {
+						var $SIGUN_NM = data[i].SIGUN_NM;
+						var $FACLT_NM = data[i].FACLT_NM;
+						var $TELNO = data[i].TELNO;
+						var $REFINE_LOTNO_ADDR = data[i].REFINE_LOTNO_ADDR;
+						var $REFINE_ZIPNO = data[i].REFINE_ZIPNO;
 
-	var row= $("<tr/>").append(
-	$("<td/>").text($SIGUN_NM),
-	$("<td/>").text($FACLT_NM),
-	$("<td/>").text($TELNO),
-	$("<td/>").text($REFINE_LOTNO_ADDR),
-	$("<td/>").text($REFINE_ZIPNO), 
-	);
+						var row = $("<tr/>").append(
+							$("<td/>").text($SIGUN_NM),
+							$("<td/>").text($FACLT_NM),
+							$("<td/>").text($TELNO),
+							$("<td/>").text($REFINE_LOTNO_ADDR),
+							$("<td/>").text($REFINE_ZIPNO),
+						);
 
-	tb.append(row);
-	}
-	$(".wrap").append(tb);
-	}
-	}
-	});
+						tb.append(row);
+					}
+					$(".wrap").append(tb);
+				}
+			}
+		});
 	});
 
   </script>
@@ -66,7 +66,7 @@
 	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 	});
 	});
-	
+
     </script>
 
 
