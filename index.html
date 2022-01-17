@@ -51,19 +51,22 @@
 
 <body>
 
-    <!-- input -->
-    <input id="myInput" type="text" placeholder="Search..">
-    <div class="wrap"></div>
-    <!-- search -->
+	<!--input-->
 
-    <script>
-     $("#myInput").on("keyup",function(){
-         var value = $(this).val();
-     $(".wrap tr").filter(function(){
-     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-     });     
-     });
+	<input id="myInput" type="text" placeholder="Search..">
+	<div class="wrap"></div>
+	<script>
 
+	//search
+
+
+	$("#myInput").on("keyup", function () {
+	var value = $(this).val();
+	$(".wrap tr").filter(function () {
+	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	});
+	});
+	
     </script>
 
 
